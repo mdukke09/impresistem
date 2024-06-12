@@ -15,7 +15,9 @@ type PostProps = {
 const PostPage: React.FC<PostProps> = ({ post }) => (
   <div>
     <h1>{post.title}</h1>
-    <p>{post.body}</p>
+    <p>User ID: {post.userId}</p>
+    <p>ID: {post.id}</p>
+    <p>Body: {post.body}</p>
   </div>
 );
 

@@ -9,6 +9,7 @@ type PostProps = {
 
 const Post: React.FC<PostProps> = ({ post }) => (
   <tr>
+    <td>{post.id}</td>
     <td>
       <Link href={`/post/${post.id}`}>{post.title}</Link>
     </td>

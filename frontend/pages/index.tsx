@@ -1,5 +1,6 @@
 import axiosInstance from '../utils/axiosInstance';
 import Post from '../components/Post';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 type HomeProps = {
   posts: Array<{
@@ -9,8 +10,12 @@ type HomeProps = {
 };
 
 const Home: React.FC<HomeProps> = ({ posts }) => (
-  <table>
+  <table className='table table-striped'>
     <tbody>
+      <th>
+        <td>Id</td>
+        <td>Title</td>
+      </th>
       {posts.map((post) => (
         <Post key={post.id} post={post} />
       ))}
